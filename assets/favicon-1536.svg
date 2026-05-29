@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1536" height="1536" viewBox="0 0 1536 1536" role="img" aria-label="AJ logo">
+  <defs>
+    <linearGradient id="g1536" x1="0" x2="1">
+      <stop offset="0" stop-color="#2563eb"/>
+      <stop offset="1" stop-color="#06b6d4"/>
+    </linearGradient>
+  </defs>
+  <rect width="1536" height="1536" rx="288" fill="url(#g1536)" />
+  <text x="50%" y="50%" font-family="Arial, 'Segoe UI', Helvetica, Roboto, sans-serif" font-size="614" fill="#ffffff" font-weight="700" text-anchor="middle" dominant-baseline="central">AJ</text>
+</svg>
