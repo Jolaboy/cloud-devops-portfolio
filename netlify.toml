@@ -1,0 +1,7 @@
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+[context.production.environment]
+# Optionally define environment variables here or set them in the Netlify UI
+# EXAMPLE: SENDGRID_API_KEY = "${SENDGRID_API_KEY}"

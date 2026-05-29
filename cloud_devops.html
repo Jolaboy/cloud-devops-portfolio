@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS Cloud & DevOps Engineer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brandDark: '#0b1220',
+                        brandElevatedDark: '#0f172a',
+                        brandBorderDark: '#1f2a44',
+                        brandChipDark: '#0b1a33',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-[#f6f8fa] text-[#0b1220] dark:bg-brandDark dark:text-[#e6edf3] font-sans antialiased transition-colors duration-200">
+
+    <nav class="sticky top-0 z-50 bg-white/90 dark:bg-brandElevatedDark/90 border-b border-gray-200 dark:border-brandBorderDark backdrop-blur-md transition-colors duration-200">
+        <div class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center text-white font-extrabold text-sm">
+                    AJ
+                </div>
+                <div>
+                    <div class="font-bold text-base leading-none">Amadou Jarju</div>
+                    <div class="text-xs text-gray-500 dark:text-gray-400 font-medium mt-0.5">AWS Cloud & DevOps Engineer</div>
+                </div>
+            </div>
+            <div class="flex items-center gap-4">
+                <div class="hidden md:flex gap-1 text-sm font-bold text-gray-500 dark:text-gray-400">
+                    <a href="#about" class="px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-brandChipDark hover:text-black dark:hover:text-white transition">About</a>
+                    <a href="#aws-core" class="px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-brandChipDark hover:text-black dark:hover:text-white transition">AWS Core</a>
+                    <a href="#iac" class="px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-brandChipDark hover:text-black dark:hover:text-white transition">IaC Philosophy</a>
+                    <a href="#devops" class="px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-brandChipDark hover:text-black dark:hover:text-white transition">DevOps & Dev</a>
+                    <a href="#contact" class="px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-brandChipDark hover:text-black dark:hover:text-white transition">Contact</a>
+                </div>
+                <button id="themeToggle" class="border border-gray-200 dark:border-brandBorderDark rounded-lg px-3 py-1.5 text-sm font-semibold hover:bg-gray-100 dark:hover:bg-brandChipDark transition cursor-pointer">
+                    Toggle Theme
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <header id="about" class="relative overflow-hidden border-b border-gray-200 dark:border-brandBorderDark bg-gradient-to-b from-blue-500/5 via-cyan-500/5 to-transparent pt-16 pb-12 transition-colors duration-200">
+        <div class="max-w-6xl mx-auto px-5 grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+            <div class="lg:col-span-2">
+                <span class="text-xs font-bold uppercase tracking-widest text-blue-600 dark:text-cyan-400 px-2.5 py-1 rounded-md bg-blue-50 dark:bg-brandChipDark border border-blue-100 dark:border-brandBorderDark/60">Platform Profile</span>
+                <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white leading-tight mb-4 mt-3">
+                    AWS Cloud & DevOps Engineer
+                </h1>
+                <div class="text-gray-600 dark:text-gray-300 text-base font-medium max-w-2xl space-y-4 leading-relaxed">
+                    <p>I am an AWS Cloud and DevOps Engineer with a solid background in software engineering. I specialize in building highly secure, automated, and observable infrastructure platforms alongside scalable web architectures.</p>
+                    <p>My core strength centers around turning manual systems into declarative code using <strong class="text-blue-600 dark:text-blue-400 font-semibold">Terraform, OpenTofu, and the AWS CDK</strong>. I bridge operational compliance gaps by deploying robust CI/CD pipelines, structural network isolations, and extensive monitoring controls.</p>
+                </div>
+                <div class="flex flex-wrap gap-3 mt-6">
+                    <a href="https://github.com/Jolaboy" class="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:opacity-95 text-white font-bold text-sm px-4 py-2.5 rounded-xl shadow-md transition">GitHub</a>
+                    <a href="https://www.linkedin.com/in/amadou-jarju/" class="inline-flex items-center gap-2 bg-white dark:bg-brandElevatedDark border border-gray-200 dark:border-brandBorderDark hover:bg-gray-50 dark:hover:bg-gray-800 font-bold text-sm px-4 py-2.5 rounded-xl transition">LinkedIn</a>
+                    <a href="mailto:amsjarju99@gmail.com" class="inline-flex items-center gap-2 bg-white dark:bg-brandElevatedDark border border-gray-200 dark:border-brandBorderDark hover:bg-gray-50 dark:hover:bg-gray-800 font-bold text-sm px-4 py-2.5 rounded-xl transition">Email</a>
+                </div>
+            </div>
+            <div class="flex flex-col items-center justify-center lg:border-l lg:border-gray-200 lg:dark:border-brandBorderDark py-4">
+                <div class="w-36 h-36 rounded-2xl bg-white dark:bg-brandElevatedDark border border-gray-200 dark:border-brandBorderDark flex items-center justify-center text-4xl font-extrabold text-blue-600 shadow-xl transition-colors duration-200">
+                    AJ
+                </div>
+                <div class="mt-4 font-extrabold text-sm tracking-wide text-gray-700 dark:text-gray-300">
+                     London, United Kingdom
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-5 py-12 space-y-20">
+
+        <section id="aws-core" class="scroll-mt-20">
+            <div class="border-l-4 border-blue-600 pl-4 mb-8">
+                <h2 class="text-2xl font-extrabold tracking-tight">1. AWS Core Infrastructure & Services</h2>
+                <p class="text-sm text-gray-500 dark:text-gray-400 font-medium">Fundamental pillars of the AWS Well-Architected Framework spanning Compute, Security, Network, and Database.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white dark:bg-brandElevatedDark border border-gray-200 dark:border-brandBorderDark rounded-2xl p-5 shadow-sm transition-colors duration-200">
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="font-bold text-sm uppercase tracking-wider text-blue-600 dark:text-blue-400">Compute Strategy</h3>
+                        <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-blue-50 dark:bg-brandChipDark border border-blue-100 dark:border-brandBorderDark">EC2 & Lambda</span>
+                    </div>
+                    <p class="text-xs text-gray-600 dark:text-gray-400 font-medium leading-relaxed">
+                        Combines traditional virtualized infrastructure mastery for enterprise legacy migrations (<strong class="text-gray-800 dark:text-gray-200">EC2</strong>) with modern serverless architectures, event-driven automatic scaling, and precise cost optimization (<strong class="text-gray-800 dark:text-gray-200">Lambda</strong>).
+                    </p>
+                </div>
+
+                <div class="bg-white dark:bg-brandElevatedDark border border-gray-200 dark:border-brandBorderDark rounded-2xl p-5 shadow-sm transition-colors duration-200">
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="font-bold text-sm uppercase tracking-wider text-blue-600 dark:text-blue-400">Network & Isolation</h3>
+                        <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-blue-50 dark:bg-brandChipDark border border-blue-100 dark:border-brandBorderDark">VPC, IAM, PrivateLink</span>
+                    </div>
+                    <p class="text-xs text-gray-600 dark:text-gray-400 font-medium leading-relaxed">
+                        Enforces zero-trust boundaries using granular <strong class="text-gray-800 dark:text-gray-200">VPC</strong> structures and strict <strong class="text-gray-800 dark:text-gray-200">IAM</strong> least-privilege matrices. Leverages <strong class="text-gray-800 dark:text-gray-200">Private Endpoints (AWS PrivateLink)</strong> to facilitate enterprise-grade secure tracking without routing sensitive traffic out to the public internet.
+                    </p>
+                </div>
+
+                <div class="bg-white dark:bg-brandElevatedDark border border-gray-200 dark:border-brandBorderDark rounded-2xl p-5 shadow-sm transition-colors duration-200">
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="font-bold text-sm uppercase tracking-wider text-blue-600 dark:text-blue-400">Data Topology</h3>
+                        <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-blue-50 dark:bg-brandChipDark border border-blue-100 dark:border-brandBorderDark">API GW, SQL, NoSQL, S3</span>
+                    </div>
+                    <p class="text-xs text-gray-600 dark:text-gray-400 font-medium leading-relaxed">
+                        Utilizes <strong class="text-gray-800 dark:text-gray-200">S3</strong> for immutable asset hosting and object stores, alongside <strong class="text-gray-800 dark:text-gray-200">RDS/PostgreSQL</strong> for traditional transactional workloads. Deploys <strong class="text-gray-800 dark:text-gray-200">API Gateway + DynamoDB</strong> combinations to form low-latency, fully managed microservice endpoints.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="iac" class="scroll-mt-20">
+            <div class="border-l-4 border-blue-600 pl-4 mb-6">
+                <h2 class="text-2xl font-extrabold tracking-tight">2. Infrastructure as Code (IaC) Philosophy</h2>
+                <p class="text-sm text-gray-500 dark:text-gray-400 font-medium">Comprehensive coverage across the major philosophies of cloud provisioning and lifecycle orchestration.</p>
+            </div>
+
+            <div class="overflow-x-auto rounded-2xl border border-gray-200 dark:border-brandBorderDark shadow-sm bg-white dark:bg-brandElevatedDark">
+                <table class="w-full text-left border-collapse text-xs md:text-sm">
+                    <thead>
+                        <tr class="bg-gray-50 dark:bg-brandDark/50 border-b border-gray-200 dark:border-brandBorderDark text-gray-700 dark:text-gray-300 font-bold uppercase tracking-wider">
+                            <th class="px-4 py-3.5">IaC Tool</th>
+                            <th class="px-4 py-3.5">Relevance to DevOps</th>
+                            <th class="px-4 py-3.5">Evaluation & Scope</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200 dark:divide-brandBorderDark font-medium text-gray-600 dark:text-gray-300">
+                        <tr>
+                            <td class="px-4 py-4 font-bold text-gray-900 dark:text-white whitespace-nowrap">Terraform / OpenTofu</td>
+                            <td class="px-4 py-4">Industry standard for declarative, cloud-agnostic infrastructure orchestration.</td>
+                            <td class="px-4 py-4"><span class="px-2 py-0.5 rounded-md font-bold text-[11px] bg-emerald-50 dark:bg-emerald-950/30 text-emerald-600 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-900/50">Essential</span> Inclusion of OpenTofu demonstrates current awareness of open-source licensing changes post-HashiCorp.</td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-4 font-bold text-gray-900 dark:text-white whitespace-nowrap">AWS CDK (TypeScript)</td>
+                            <td class="px-4 py-4">Generates CloudFormation using familiar, strongly typed programming languages.</td>
+                            <td class="px-4 py-4"><span class="px-2 py-0.5 rounded-md font-bold text-[11px] bg-blue-50 dark:bg-blue-950/30 text-blue-600 dark:text-blue-400 border border-blue-200 dark:border-blue-900/50">Highly Valuable</span> Empowers cloud engineers to synthesize, abstract, and package cloud infrastructure modules like modular software.</td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-4 font-bold text-gray-900 dark:text-white whitespace-nowrap">CloudFormation</td>
+                            <td class="px-4 py-4">AWS native declarative template system.</td>
+                            <td class="px-4 py-4"><span class="px-2 py-0.5 rounded-md font-bold text-[11px] bg-purple-50 dark:bg-purple-950/30 text-purple-600 dark:text-purple-400 border border-purple-200 dark:border-purple-900/50">Fundamental</span> Provides the deep lower-level understanding required to trace engine state and debug deployment failures under the hood.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="devops" class="scroll-mt-20 grid grid-cols-1 lg:grid-cols-3 gap-8">
+            
+            <div class="lg:col-span-2 space-y-10">
+                <div>
+                    <div class="border-l-4 border-blue-600 pl-4 mb-4">
+                        <h2 class="text-xl font-extrabold tracking-tight">3. DevOps Engine Room & CI/CD</h2>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="p-4 bg-white dark:bg-brandElevatedDark border border-gray-200 dark:border-brandBorderDark rounded-xl">
+                            <h4 class="font-bold text-sm text-gray-900 dark:text-white mb-1">GitHub Actions & Git</h4>
+                            <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">Automates localized build verification, testing suites, and fast deployment matrices directly tied into foundational branch version control structures.</p>
+                        </div>
+                        <div class="p-4 bg-white dark:bg-brandElevatedDark border border-gray-200 dark:border-brandBorderDark rounded-xl">
+                            <h4 class="font-bold text-sm text-gray-900 dark:text-white mb-1">Docker & Bash Scripting</h4>
+                            <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">Standardizes local development layers and runtime parity containers, bound together using universal shell automation glue for direct environment control.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="border-l-4 border-blue-600 pl-4 mb-4">
+                        <h2 class="text-xl font-extrabold tracking-tight">4. Observability Pillars</h2>
+                    </div>
+                    <div class="p-5 bg-white dark:bg-brandElevatedDark border border-gray-200 dark:border-brandBorderDark rounded-2xl flex flex-wrap sm:flex-nowrap gap-4 items-center">
+                        <div class="space-y-2">
+                            <div class="flex gap-2">
+                                <span class="px-2 py-0.5 text-[10px] font-bold rounded bg-gray-100 dark:bg-brandChipDark border border-gray-200 dark:border-brandBorderDark">CloudWatch</span>
+                                <span class="px-2 py-0.5 text-[10px] font-bold rounded bg-gray-100 dark:bg-brandChipDark border border-gray-200 dark:border-brandBorderDark">Datadog</span>
+                                <span class="px-2 py-0.5 text-[10px] font-bold rounded bg-gray-100 dark:bg-brandChipDark border border-gray-200 dark:border-brandBorderDark">Dynatrace</span>
+                            </div>
+                            <p class="text-xs text-gray-600 dark:text-gray-400 font-medium leading-relaxed">
+                                Moving beyond simple deployments to maintain total stack lifecycle visibility. Fluent in native AWS CloudWatch log collection metric engines and enterprise Application Performance Monitoring (<strong class="text-gray-800 dark:text-gray-200">APM</strong>) tooling ecosystems to accurately isolate performance bottlenecks and application anomalies.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-gradient-to-br from-blue-600/10 via-cyan-500/5 to-transparent border border-blue-200/60 dark:border-brandBorderDark p-6 rounded-2xl flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center gap-2 mb-3">
+                        <div class="w-2 h-2 rounded-full bg-cyan-500 animate-pulse"></div>
+                        <h3 class="font-extrabold text-base tracking-tight text-gray-900 dark:text-white">5. Software Engineering</h3>
+                    </div>
+                    <p class="text-xs font-bold text-blue-600 dark:text-cyan-400 uppercase tracking-wider mb-2">The "Dev" in DevOps</p>
+                    <p class="text-xs text-gray-600 dark:text-gray-300 leading-relaxed font-medium mb-4">
+                        A strong programming history offsets traditional system administration constraints, driving complex automations and direct application team collaboration.
+                    </p>
+                    <ul class="space-y-2.5 text-xs font-semibold text-gray-700 dark:text-gray-200">
+                        <li class="flex items-start gap-2">
+                            <span class="text-blue-500 font-bold">&bull;</span>
+                            <span><strong>Python:</strong> Custom tooling orchestration and optimized Lambda runtime triggers.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-blue-500 font-bold">&bull;</span>
+                            <span><strong>JS / TS / Node.js:</strong> Programmatic multi-account infrastructure delivery patterns via AWS CDK.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-blue-500 font-bold">&bull;</span>
+                            <span><strong>React / Next.js:</strong> Frontend optimization architectures (SSR caching strategies via CloudFront).</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-blue-500 font-bold">&bull;</span>
+                            <span><strong>C# / .NET Core:</strong> Seamless cloud migration handling of complex microservices.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="pt-4 border-t border-gray-200/50 dark:border-brandBorderDark/50 mt-4 text-[11px] font-bold text-gray-500 dark:text-gray-400">
+                    Engineered to align operations with runtime source code codebases.
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="scroll-mt-20">
+            <div class="border-l-4 border-blue-600 pl-4 mb-6">
+                <h2 class="text-2xl font-extrabold tracking-tight">Get In Touch</h2>
+                <p class="text-sm text-gray-500 dark:text-gray-400 font-medium">Let's discuss automated infrastructure delivery, tooling pipelines, or backend architecture.</p>
+            </div>
+            <div class="bg-white dark:bg-brandElevatedDark border border-gray-200 dark:border-brandBorderDark rounded-2xl p-6 shadow-sm max-w-xl transition-colors duration-200">
+                <form id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="space-y-4">
+                    <input type="hidden" name="form-name" value="contact" />
+                    <p class="hidden"><label>Don’t fill this out if you're human: <input name="bot-field" /></label></p>
+
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider mb-1.5 opacity-80">Full Name</label>
+                        <input name="name" type="text" placeholder="John Doe" required class="w-full bg-gray-50 dark:bg-brandDark border border-gray-200 dark:border-brandBorderDark rounded-xl px-4 py-2.5 text-sm font-medium focus:outline-none focus:border-blue-500 transition" />
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider mb-1.5 opacity-80">Email Address</label>
+                        <input name="email" type="email" placeholder="john@example.com" required class="w-full bg-gray-50 dark:bg-brandDark border border-gray-200 dark:border-brandBorderDark rounded-xl px-4 py-2.5 text-sm font-medium focus:outline-none focus:border-blue-500 transition" />
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider mb-1.5 opacity-80">Message</label>
+                        <textarea name="message" rows="4" placeholder="Let's build something scalable..." required class="w-full bg-gray-50 dark:bg-brandDark border border-gray-200 dark:border-brandBorderDark rounded-xl px-4 py-2.5 text-sm font-medium focus:outline-none focus:border-blue-500 transition"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm py-3 rounded-xl shadow-md transition cursor-pointer">
+                        Send Message
+                    </button>
+                </form>
+                <div id="contactStatus" class="mt-4 text-sm font-medium text-gray-700 dark:text-gray-300"></div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-white dark:bg-brandElevatedDark border-t border-gray-200 dark:border-brandBorderDark py-6 transition-colors duration-200">
+        <div class="max-w-6xl mx-auto px-5 flex flex-wrap justify-between items-center gap-4 text-sm font-medium text-gray-500 dark:text-gray-400">
+            <div>
+                &copy; 2026 <span class="text-gray-900 dark:text-white font-bold">Amadou Jarju</span>. All rights reserved.
+            </div>
+            <div class="flex gap-4">
+                <a href="https://github.com/Jolaboy" class="hover:text-blue-500 transition">GitHub</a>
+                <a href="https://www.linkedin.com/in/amadou-jarju/" class="hover:text-blue-500 transition">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const themeToggleBtn = document.getElementById('themeToggle');
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        }
+        themeToggleBtn.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+        });
+        
+        // Contact form: AJAX submit to Netlify Forms for a realtime UX
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('contactForm');
+            const statusEl = document.getElementById('contactStatus');
+            if (!form) return;
+
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                statusEl.textContent = '';
+                const submitBtn = form.querySelector('button[type="submit"]');
+                submitBtn.disabled = true;
+                const formData = new FormData(form);
+
+                // Send email via Netlify Function (SendGrid)
+                let emailSent = false;
+                try {
+                    const fnRes = await fetch('/.netlify/functions/send-contact', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(Object.fromEntries(formData.entries()))
+                    });
+                    emailSent = fnRes.ok;
+                } catch (err) {
+                    emailSent = false;
+                }
+
+                // Submit to Netlify Forms (for dashboard/backup)
+                try {
+                    const res = await fetch('/', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                        body: new URLSearchParams(formData).toString()
+                    });
+
+                    if (res.ok) {
+                        statusEl.className = 'mt-4 p-3 rounded-lg bg-emerald-50 text-emerald-800';
+                        statusEl.textContent = emailSent ? 'Thanks — your message was sent. I will reply shortly.' : 'Received — message saved but email delivery failed.';
+                        form.reset();
+                    } else {
+                        throw new Error('Form submission failed');
+                    }
+                } catch (err) {
+                    statusEl.className = 'mt-4 p-3 rounded-lg bg-amber-50 text-amber-800';
+                    statusEl.textContent = 'Submission failed — please try again or email directly.';
+                    submitBtn.disabled = false;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
