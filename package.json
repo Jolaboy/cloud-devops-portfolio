@@ -2,9 +2,7 @@
   "name": "cloud-devops-portfolio",
   "version": "1.0.0",
   "private": true,
-  "dependencies": {
-    "@sendgrid/mail": "^7.7.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "htmlhint": "^1.0.0"
   },
