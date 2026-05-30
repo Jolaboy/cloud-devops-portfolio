@@ -5,10 +5,13 @@ exports.handler = async (event) => {
   }
 
   let payload;
+  // Debug: log incoming body and headers
+  console.log('Function invoked. headers=', JSON.stringify(event.headers || {}));
+  console.log('Raw body:', event.body);
   try {
     payload = JSON.parse(event.body);
   } catch (e) {
-    const params = new URLSearchParams(event.body);
+    const params = new URLSearchParams(event.body || '');
     payload = Object.fromEntries(params.entries());
   }
 
