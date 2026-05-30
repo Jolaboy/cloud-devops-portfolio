@@ -297,15 +297,19 @@
 
                 // Send email via Netlify Function (SendGrid)
                 let emailSent = false;
+                let fnErrorText = '';
                 try {
                     const fnRes = await fetch('/.netlify/functions/send-contact', {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify(Object.fromEntries(formData.entries()))
                     });
+                    // capture function response body for debugging
+                    try { fnErrorText = await fnRes.text(); } catch (e) { fnErrorText = ''; }
                     emailSent = fnRes.ok;
                 } catch (err) {
                     emailSent = false;
+                    fnErrorText = (err && err.message) || String(err);
                 }
 
                 // Submit to Netlify Forms (for dashboard/backup)
@@ -319,6 +323,13 @@
                     if (res.ok) {
                         statusEl.className = 'mt-4 p-3 rounded-lg bg-emerald-50 text-emerald-800';
                         statusEl.textContent = emailSent ? 'Thanks — your message was sent. I will reply shortly.' : 'Received — message saved but email delivery failed.';
+                        // show function debug message if available
+                        if (!emailSent && fnErrorText) {
+                            const dbg = document.createElement('div');
+                            dbg.className = 'mt-2 text-xs text-gray-600 dark:text-gray-300';
+                            dbg.textContent = `Function response: ${fnErrorText}`;
+                            statusEl.appendChild(dbg);
+                        }
                         form.reset();
                     } else {
                         throw new Error('Form submission failed');
